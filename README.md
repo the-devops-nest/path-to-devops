@@ -17,36 +17,68 @@ Participants will learn to:
 - Implement monitoring, logging, and basic DevSecOps checks
 - Deliver a complete end-to-end capstone project
 
-## 4‑Month Overview (weekend-by-weekend)
+## 4‑Month Overview (4 weekends per month)
 
 Month 1 — Core Fundamentals
-- Weekend 1: DevOps foundations & Git
-  - Class 1: Introduction to DevOps — culture, lifecycle, and value
-  - Class 2: Git fundamentals — branching, PRs, merge conflicts (practical lab)
-- Weekend 2: Linux & Shell
-  - Class 3: Essential Linux commands and tooling
-  - Class 4: Bash scripting for automation
-- Weekend 3: Docker basics
-  - Class 5: Container concepts and images
-  - Class 6: Dockerfiles, Compose, multi-container labs
-- Weekend 4: CI/CD foundations
-  - Class 7: CI/CD design and practices
-  - Class 8: Jenkins / GitHub Actions pipelines (hands-on)
+- Weekend 1: DevOps foundations
+  - Class 1: DevOps culture, lifecycle, and value
+  - Class 2: Delivery pipeline mapping — identify bottlenecks (lab)
+- Weekend 2: Git & collaboration
+  - Class 3: Git basics — branching, commits, remotes
+  - Class 4: PR workflows, merge conflicts, and code review best practices (lab)
+- Weekend 3: Linux & Shell
+  - Class 5: Essential Linux tooling and file management
+  - Class 6: Bash scripting for automation, small script lab
+- Weekend 4: Docker fundamentals
+  - Class 7: Containers, images, registries
+  - Class 8: Dockerfile authoring and Docker Compose (hands-on)
 
 Month 2 — Cloud & Infrastructure as Code
-- Weekends cover AWS fundamentals, VPC, S3, EC2, RDS, Terraform basics, modules, and a multi‑tier infra lab.
+- Weekend 1: AWS core services
+  - Class 1: VPC, EC2, IAM basics
+  - Class 2: S3, RDS, and storage patterns (lab)
+- Weekend 2: Terraform basics
+  - Class 3: Terraform state, providers, resources
+  - Class 4: Writing modules and structuring code (lab)
+- Weekend 3: Networking & security
+  - Class 5: VPC design, subnets, security groups
+  - Class 6: Secrets management and IAM policies (lab)
+- Weekend 4: Multi‑tier infra lab
+  - Class 7: Combine modules into multi‑tier app infra
+  - Class 8: Terraform plan and safe review workflow
 
 Month 3 — Kubernetes & Observability
-- Weekends cover Kubernetes concepts, EKS setup, Helm, deploying real apps, Prometheus/Grafana, and centralized logging patterns.
+- Weekend 1: Kubernetes fundamentals
+  - Class 1: K8s architecture, objects, and patterns
+  - Class 2: Deployments, Services, ConfigMaps, Secrets (lab)
+- Weekend 2: EKS and Helm
+  - Class 3: Provisioning EKS (or local cluster alternatives)
+  - Class 4: Helm charts and release management (lab)
+- Weekend 3: App lifecycle & scaling
+  - Class 5: Rolling updates, probes, and autoscaling
+  - Class 6: Blue/green & canary deployment patterns (lab)
+- Weekend 4: Monitoring & logging
+  - Class 7: Prometheus metrics and Grafana dashboards
+  - Class 8: Centralized logging (Fluentd/ELK) and alerting (lab)
 
 Month 4 — DevSecOps, Data & Capstone
-- Weekends cover security in pipelines (SAST/DAST, secrets), Databricks integration overview, capstone build, and final presentations.
+- Weekend 1: Security in pipelines
+  - Class 1: SAST/DAST, dependency scanning, secrets scanning
+  - Class 2: Pipeline hardening and policy enforcement (lab)
+- Weekend 2: CI/CD advanced patterns
+  - Class 3: GitOps, multi‑env pipelines, rollback strategies
+  - Class 4: Build caching, artifact management, and performance (lab)
+- Weekend 3: Data & integrations
+  - Class 5: Data platform overview (Databricks/GCP/AWS alternatives)
+  - Class 6: Integrating data workflows with infra and pipelines (lab)
+- Weekend 4: Capstone sprint & presentations
+  - Class 7: Final sprint: integrate code → CI/CD → infra → EKS
+  - Class 8: Demo, evaluation, and post‑mortem
 
 ## Weekend / Class format
-- Short conceptual session (30–45 min)
-- Hands-on lab with starter code and verification script (60–120 min)
+- Short conceptual session (2 hours)
+- Hands-on lab with starter code and verification script (20 min)
 - Mini checkpoint and practical takeaway at the end
 
 ## Final capstone
 A guided end-to-end project integrating Git → CI/CD → Docker → Terraform → EKS with monitoring and security checks. Deliverables include architecture diagrams, deployment artifacts, and an assessment rubric.
-
