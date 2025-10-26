@@ -110,7 +110,7 @@ By the end of this program, you’ll be able to:
 
 ---
 
-## 🧭 Weekend / Class Format
+## 🧭 Weekend / online Format
 ⏱️ **2-Hour Concept Session** → 🔧 **20-Min Hands-On Lab** → 🧩 **Mini Checkpoint**  
 Each session ends with a *practical takeaway or small automation script.*
 
