@@ -1,7 +1,5 @@
 # 🚀 DevOps Training Program — 4-Month Hands-On Journey  
 
-![DevOps Roadmap](A_flowchart_infographic_in_digital_illustration_wi.png)
-
 A **project-driven DevOps learning roadmap** that takes you from fundamentals ➜ to building ➜ to deploying ➜ to securing ➜ a production-ready, observable application on **AWS**.  
 Focus: *hands-on labs, repeatable workflows, and a guided final capstone.*
 
@@ -27,7 +25,7 @@ By the end of this program, you’ll be able to:
 ---
 
 ## 🗓️ 4-Month Roadmap Overview
-
+![DevOps Roadmap](roadmap.png)
 ### 🌱 Month 1 — Core Fundamentals  
 **Goal:** Build strong DevOps foundations
 
