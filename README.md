@@ -1,4 +1,93 @@
-# 🚀 DevOps Training Plan  
+// ...existing code...
+# 🚀 DevOps Training Program — 4‑Month Hands‑On Curriculum
+
+Concise, demo-ready overview for instructors and demo audiences. This course is designed to take learners from core DevOps fundamentals to deploying a secure, observable application on AWS EKS with an end‑to‑end CI/CD pipeline.
+
+## Quick elevator pitch (for demo)
+A practical 4‑month program that teaches DevOps culture, tools, and workflows through weekly hands‑on labs and real projects. Learners will build and ship an application using Git → CI/CD → Docker → Terraform → EKS, with monitoring and security built in.
+
+## Who is this for?
+- Junior developers or operations engineers transitioning to DevOps
+- DevOps learners who want a project-based curriculum
+- Teams wanting a reproducible training plan to upskill staff
+
+## Learning outcomes
+By program end learners will be able to:
+- Apply DevOps principles and workflows
+- Build CI/CD pipelines (Jenkins / GitHub Actions)
+- Containerize apps with Docker and Compose
+- Provision AWS infra with Terraform
+- Run workloads on Kubernetes (EKS) and Helm
+- Implement monitoring, logging and basic DevSecOps checks
+- Deliver a final end-to-end project
+
+## 4‑Month Roadmap (high level)
+Month 1 — Fundamentals
+- Git, Linux, Bash, Docker, CI/CD basics (Jenkins/GitHub Actions)
+
+Month 2 — Cloud & IaC
+- AWS core services, Terraform, multi‑tier infra, VPC, S3, RDS
+
+Month 3 — Kubernetes & Observability
+- EKS, Helm, Prometheus/Grafana, logging (ELK/Fluent)
+
+Month 4 — DevSecOps, Data & Final Project
+- Security in pipelines, Databricks overview, final project build & showcase
+
+## Demo script (10–15 min)
+1. 0:00–0:60 — Program elevator pitch and outcomes (use slide)
+2. 1:00–3:00 — Curriculum walkthrough (highlight month milestones)
+3. 3:00–7:00 — Live demo: show repo, key files, and one short live command
+   - Show Dockerfile + docker build/run OR Terraform plan (local)
+4. 7:00–10:00 — Final project brief: architecture diagram and delivery checklist
+5. 10:00–12:00 — Q&A and next steps for learners
+
+## Live demo checklist (prepare before session)
+- AWS credentials configured on demo machine (or show screenshots)
+- Docker installed and running: docker --version
+- kubectl and eksctl (or minikube) installed: kubectl version --client
+- Terraform installed: terraform -version
+- Jenkins or GitHub Actions pipeline files present for quick preview
+- Example repo branch with a small app ready (avoid long builds)
+
+Sample quick commands to show in demo:
+- Show Docker build: docker build -t devops-demo:latest ./demo-app
+- Show Terraform plan (in safe mode): terraform init && terraform plan
+- Show kubectl resources: kubectl get pods --namespace demo
+
+## Repo structure (what to show)
+- /labs — step‑by‑step lab guides and starter code
+- /terraform — example modules and sample infra code
+- /k8s — manifest examples and Helm charts
+- /ci — Jenkinsfiles / GitHub Actions workflows
+- /final-project — architecture, checklist, evaluation rubric
+
+## How to run a sample lab (2‑minute flow)
+1. Clone the repo and open the lab folder:
+   - git clone <repo> && cd path-to-devops/labs/01-git
+2. Follow the lab README (each lab is self-contained)
+3. Use provided scripts for quick verification:
+   - ./scripts/verify-lab.sh
+
+## Presentation tips
+- Focus on outcomes and practical skills, not tool minutiae
+- Use short live demos (30–90s) to illustrate flow
+- Prepare screenshots for long-running operations (Terraform apply, EKS creation)
+- End with the final project architecture and how learners will be assessed
+
+## Resources & references
+- Official docs: Terraform, Kubernetes, Docker, AWS
+- Recommended quick reads: The Phoenix Project, Continuous Delivery
+- Starter templates included in /templates
+
+## Contact & Next steps
+- Use the /labs folder for guided practice
+- Instructor notes and slide deck stored in /docs
+- For changes or additions open a PR against this repo
+
+// ...existing code...
+{ changed code }
+// ...existing code...# 🚀 DevOps Training Plan  
 
 This repository contains a **4-month structured DevOps Training Program** with detailed class-by-class agendas, labs, and projects.  
 
