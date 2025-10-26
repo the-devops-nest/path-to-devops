@@ -47,23 +47,6 @@ Month 4 — DevSecOps, Data & Capstone
 - Hands-on lab with starter code and verification script (60–120 min)
 - Mini checkpoint and practical takeaway at the end
 
-## Repository layout
-- /labs — step-by-step lab guides and starter apps  
-- /terraform — example modules and reference infra  
-- /k8s — manifests and Helm charts  
-- /ci — Jenkinsfiles and GitHub Actions workflows  
-- /final-project — architecture, checklist, and rubric  
-- /docs — instructor slides, notes, and templates
-
-## Quick start
-1. git clone <repo-url>
-2. cd path-to-devops
-3. open the desired lab folder and follow its README (each lab is self-contained)
-
 ## Final capstone
 A guided end-to-end project integrating Git → CI/CD → Docker → Terraform → EKS with monitoring and security checks. Deliverables include architecture diagrams, deployment artifacts, and an assessment rubric.
 
-## Resources & contributions
-- Official docs: Terraform, Kubernetes, Docker, AWS  
-- Suggested reading: The Phoenix Project, Continuous Delivery  
-- To propose changes, open a PR against this repository
