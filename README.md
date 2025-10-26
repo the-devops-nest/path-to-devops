@@ -21,7 +21,77 @@ By program end learners will be able to:
 - Implement monitoring, logging and basic DevSecOps checks
 - Deliver a final end-to-end project
 
-## 4‑Month Roadmap (high level)
+## 4‑Month Roadmap (high level)// ...existing code...
+# 🚀 DevOps Training Plan  
+
+This repository contains a polished, 4‑month structured DevOps Training Program with class-by-class agendas, hands‑on labs, and a capstone project.
+
+---
+
+## 📖 Table of Contents  
+- [Month 1: Core Fundamentals](#-month-1-core-fundamentals)  
+- [Month 2: Cloud & Infrastructure as Code](#-month-2-cloud--infrastructure-as-code)  
+- [Month 3: Kubernetes on AWS & Observability](#-month-3-kubernetes-on-aws--observability)  
+- [Month 4: DevSecOps, Data, and Final Project](#-month-4-devsecops-data-and-final-project)  
+- [Final Outcome](#-final-outcome)  
+
+---
+
+## 📅 Month 1: Core Fundamentals  
+
+### Weekend 1: DevOps & Git — Foundation (Class 1 & Class 2)
+
+Class 1 — Introduction to DevOps
+- Goal: Ground learners in DevOps culture, goals, and value.
+- Key topics:
+  - DevOps principles and lifecycle (CI, CD, Feedback loops)
+  - Team workflows and cross-functional collaboration
+  - Real-world case study and common anti-patterns
+- Hands‑on: Short workshop mapping a simple delivery workflow and identifying bottlenecks.
+- Outcomes: Explain why DevOps matters, identify pipeline stages, and propose one practical improvement for an example workflow.
+
+Class 2 — Git Fundamentals (practical)
+- Goal: Make learners confident with Git for daily development and collaboration.
+- Key topics:
+  - Core commands: init, clone, add, commit, branch, merge, rebase
+  - Remote workflows: origin, pull, push, PR basics
+  - Branching strategies and resolving conflicts
+- Hands‑on lab:
+  - Create a repo, implement a feature branch, open and merge a PR (local or hosted)
+  - Short challenge: resolve a merge conflict and write a clear commit message
+- Outcomes: Create and manage branches, perform merges and rebases, use remotes and PRs effectively.
+
+> Tip: Each class includes a concise lab README, starter repo, and a verification script to confirm outcomes.
+
+### Weekend 2: Linux & Shell Scripting  
+- Class 3: Essential Linux Commands (navigation, permissions, text tools)  
+- Class 4: Bash scripting basics (variables, loops, automation)  
+
+### Weekend 3: Docker Basics 🐳  
+- Class 5: Containers & Docker concepts  
+- Class 6: Dockerfiles, Compose, and multi-container labs  
+
+### Weekend 4: CI/CD Foundations ⚙️  
+- Class 7: CI/CD concepts and workflow design  
+- Class 8: Jenkins/GitHub Actions basics and pipeline lab  
+
+---
+
+(remaining months and weekends continue as previously structured)...
+
+## 🎯 Final Outcome  
+By program end learners will:
+- Apply DevOps principles and workflows
+- Build CI/CD pipelines and automate delivery
+- Containerize apps and run them on Kubernetes (EKS)
+- Provision cloud infra with Terraform
+- Implement monitoring, logging and DevSecOps checks
+- Deliver a full end‑to‑end capstone project
+
+---
+// ...existing code...
+{ changed code }
+// ...existing code...
 Month 1 — Fundamentals
 - Git, Linux, Bash, Docker, CI/CD basics (Jenkins/GitHub Actions)
 
