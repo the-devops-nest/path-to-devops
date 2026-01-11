@@ -1,25 +1,35 @@
 name: access env variables
+
 on:
-    push:
-      branches:
-        - main
+  push:
+    branches:
+      - main
+
 jobs:
   demo-env:
     runs-on: ubuntu-latest
+    environment: dev 
+
+    env:
+      WORKFLOW_VERSION: "1.0.0"
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Display Org level Variable
+      - name: Display Org / Repo Variable
         run: |
-          echo "The environment is ${{ vars.COMPANY_NAME }}"
-      - name: Display enviroment level Variable
+          echo "Company is ${{ vars.COMPANY_NAME }}"
+
+      - name: Display Environment Variables
         run: |
-            echo "The repo environment is ${{ vars.owner}},${{ vars.env }}"
-      - name: Display Repository level Variable
+          echo "Owner: ${{ vars.OWNER }}"
+          echo "Environment: ${{ vars.ENV_NAME }}"
+
+      - name: Display Repository Variable
         run: |
-          echo "The  mentior name is ${{ vars.MENTIOR }}"
-        
-      - name: Display Workflow level Variable
+          echo "Mentor name is ${{ vars.MENTOR }}"
+
+      - name: Display Workflow Runtime Variable
         run: |
-          echo "The workflow version is ${{ vars.WORKFLOW_VERSION }}"   
+          echo "Workflow version is $WORKFLOW_VERSION"
