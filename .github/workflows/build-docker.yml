@@ -20,7 +20,7 @@ jobs:
       - name: Check Python version
         run: python --version
       - name : Run Python script
-        run: print "Python setup completed"
+        run: print("Python setup completed")
 
       # 4️⃣ Setup Java
       - name: Set up Java
