@@ -8,9 +8,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1️⃣ Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # 2️⃣ Create config dictionary (JSON) and set as OUTPUT
       - name: Create config dictionary
         id: config
         run: |
@@ -20,8 +22,9 @@ jobs:
             "region": "us-east-1",
             "replicas": 3
           }'
+
           echo "config<<EOF" >> $GITHUB_OUTPUT
-          echo "$CONFIG_JSON" >> $GITHUB_OUTPUT
+          printf '%s\n' "$CONFIG_JSON" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
 
       # 3️⃣ Print raw JSON output (debug)
@@ -30,7 +33,7 @@ jobs:
           echo "Raw JSON:"
           echo '${{ steps.config.outputs.config }}'
 
-      # 4️⃣ Parse JSON using jq (shell)
+      # 4️⃣ Parse JSON using jq
       - name: Parse JSON using jq
         run: |
           CONFIG='${{ steps.config.outputs.config }}'
@@ -39,7 +42,7 @@ jobs:
           echo "Region: $(echo "$CONFIG" | jq -r .region)"
           echo "Replicas: $(echo "$CONFIG" | jq -r .replicas)"
 
-      # 5️⃣ Parse JSON using Python (very common)
+      # 5️⃣ Parse JSON using Python
       - name: Parse JSON using Python
         run: |
           python <<EOF
@@ -53,7 +56,7 @@ jobs:
           print("REPLICAS =", config["replicas"])
           EOF
 
-      # 6️⃣ Realistic usage example (deploy simulation)
+      # 6️⃣ Realistic usage example
       - name: Deploy using config
         run: |
           CONFIG='${{ steps.config.outputs.config }}'
