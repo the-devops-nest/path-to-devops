@@ -7,7 +7,7 @@ on:
         description: "Demo environment name"
         required: true
 env:
-  DEMO_ENV: ${{ github.event.inputs.DEMO_ENV }}
+  ENV: ${{ github.event.inputs.DEMO_ENV }}
 
 
 jobs:
@@ -41,4 +41,4 @@ jobs:
         id: run_java
         run: echo "Java setup completed"
       - name: Display Environment Variable
-        run: echo "The demo environment is $DEMO_ENV"
+        run: echo "The demo environment is $ENV"
