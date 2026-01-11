@@ -8,11 +8,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Checkout code (optional but standard)
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2️⃣ Create a DICT (JSON) and set it as STEP OUTPUT
       - name: Create config dictionary
         id: config
         run: |
@@ -22,8 +20,9 @@ jobs:
             "region": "us-east-1",
             "replicas": 3
           }'
-
-          echo "config=$CONFIG_JSON" >> $GITHUB_OUTPUT
+          echo "config<<EOF" >> $GITHUB_OUTPUT
+          echo "$CONFIG_JSON" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
 
       # 3️⃣ Print raw JSON output (debug)
       - name: Print JSON output
