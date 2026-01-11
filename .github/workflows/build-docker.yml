@@ -6,10 +6,12 @@ on:
       DEMO_ENV:
         description: "Demo environment name"
         required: true
+      Owner:
+        description: "Repository owner"
+        required: true
 env:
   ENV: ${{ github.event.inputs.DEMO_ENV }}
-
-
+  owner: ${{ github.event.inputs.Owner }}
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -42,3 +44,5 @@ jobs:
         run: echo "Java setup completed"
       - name: Display Environment Variable
         run: echo "The demo environment is $ENV"
+      - name: Display Owner Variable
+        run: echo "The repository owner is $owner"
