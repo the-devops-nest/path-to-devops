@@ -1,0 +1,25 @@
+name: Python Tests
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python: [3.9, 3.11]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        run: |
+          echo "Setting up Python ${{ matrix.python }}"
+
+      - name: Run tests
+        run: |
+          echo "Running tests on Python ${{ matrix.python }}"
