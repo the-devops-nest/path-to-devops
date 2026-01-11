@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
+        
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -20,8 +20,7 @@ jobs:
       - name: Check Python version
         run: python --version
       - name: Run Python script
-        run: print("Python setup completed")
-        shell: python
+        run: echo "Python setup completed"
 
       # 4️⃣ Setup Java
       - name: Set up Java
@@ -34,5 +33,4 @@ jobs:
       - name: Run build
         run: echo "Build completed"
       - name: run java script
-        run: system.out.println("Java setup completed");
-        shell: java
+        run: echo "Java setup completed"
