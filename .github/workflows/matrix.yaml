@@ -10,7 +10,7 @@ jobs:
 
     strategy:
       matrix:
-        python: [3.9, 3.11]
+        python: [3.9, 3.11, 3.12]
 
     steps:
       - name: Checkout code
@@ -19,7 +19,6 @@ jobs:
       - name: Setup Python
         run: |
           echo "Setting up Python ${{ matrix.python }}"
-
       - name: Run tests
         run: |
           echo "Running tests on Python ${{ matrix.python }}"
