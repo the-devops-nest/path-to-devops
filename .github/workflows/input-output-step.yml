@@ -1,0 +1,64 @@
+name: JSON Output Pipeline
+
+on:
+  workflow_dispatch
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1️⃣ Checkout code (optional but standard)
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2️⃣ Create a DICT (JSON) and set it as STEP OUTPUT
+      - name: Create config dictionary
+        id: config
+        run: |
+          CONFIG_JSON='{
+            "env": "prod",
+            "version": "v1.2.0",
+            "region": "us-east-1",
+            "replicas": 3
+          }'
+
+          echo "config=$CONFIG_JSON" >> $GITHUB_OUTPUT
+
+      # 3️⃣ Print raw JSON output (debug)
+      - name: Print JSON output
+        run: |
+          echo "Raw JSON:"
+          echo '${{ steps.config.outputs.config }}'
+
+      # 4️⃣ Parse JSON using jq (shell)
+      - name: Parse JSON using jq
+        run: |
+          CONFIG='${{ steps.config.outputs.config }}'
+          echo "Environment: $(echo "$CONFIG" | jq -r .env)"
+          echo "Version: $(echo "$CONFIG" | jq -r .version)"
+          echo "Region: $(echo "$CONFIG" | jq -r .region)"
+          echo "Replicas: $(echo "$CONFIG" | jq -r .replicas)"
+
+      # 5️⃣ Parse JSON using Python (very common)
+      - name: Parse JSON using Python
+        run: |
+          python <<EOF
+          import json
+
+          config = json.loads('''${{ steps.config.outputs.config }}''')
+
+          print("ENV =", config["env"])
+          print("VERSION =", config["version"])
+          print("REGION =", config["region"])
+          print("REPLICAS =", config["replicas"])
+          EOF
+
+      # 6️⃣ Realistic usage example (deploy simulation)
+      - name: Deploy using config
+        run: |
+          CONFIG='${{ steps.config.outputs.config }}'
+          ENV=$(echo "$CONFIG" | jq -r .env)
+          VERSION=$(echo "$CONFIG" | jq -r .version)
+
+          echo "Deploying version $VERSION to environment $ENV"

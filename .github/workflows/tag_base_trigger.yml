@@ -8,14 +8,20 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
+      - name: Extract release tag
+        id: tag
+        run: |
+          echo "release_tag=${GITHUB_REF_NAME}" >> $GITHUB_OUTPUT
 
-      - name: Print tag name
-        run: echo "Release tag is $GITHUB_REF_NAME"
-
+      # 2️⃣ STEP 2: Use output in build step
       - name: Build artifact
-        run: echo "Building release for $GITHUB_REF_NAME"
+        run: |
+          echo "Building release for version ${{ steps.tag.outputs.release_tag }}"
 
+      # 3️⃣ STEP 3: Use SAME output in deploy step
       - name: Deploy
-        run: echo "Deploying version $GITHUB_REF_NAME"
+        run: |
+          echo "Deploying version ${{ steps.tag.outputs.release_tag }}"
