@@ -2,13 +2,17 @@ name: CI Demo
 
 on:
   workflow_dispatch:
+    inputs:
+      DEMO_ENV:
+        description: "Demo environment name"
+        required: true
+env:
+  DEMO_ENV: ${{ github.event.inputs.DEMO_ENV }}
+
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      DEMO_ENV: 'GitHub Actions to DevOps'
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -36,7 +40,5 @@ jobs:
       - name: run java script
         id: run_java
         run: echo "Java setup completed"
-
-      - name: Final step (depends on Python & Java)
-        if: ${{ steps.run_python.outcome == 'success' && steps.run_java.outcome == 'success' }}
-        run: echo "Both Python and Java setups completed"
+      - name: Display Environment Variable
+        run: echo "The demo environment is $DEMO_ENV"
