@@ -17,7 +17,6 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
-
       - name: Check Python version
         run: python --version
 
@@ -27,11 +26,7 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
-
-      # 5️⃣ Verify Java
       - name: Check Java version
         run: java -version
-
-      # 6️⃣ Build step (example)
       - name: Run build
         run: echo "Build completed"
