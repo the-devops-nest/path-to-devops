@@ -1,0 +1,15 @@
+name: access env variables
+on:
+    push:
+      branches:
+        - main
+jobs:
+  demo-env:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Display Org level Variable
+        run: |
+          echo "The environment is ${{ env.COMPANY_NAME }}"
