@@ -19,8 +19,9 @@ jobs:
           python-version: '3.10'
       - name: Check Python version
         run: python --version
-      - name : Run Python script
+      - name: Run Python script
         run: print("Python setup completed")
+        shell: python
 
       # 4️⃣ Setup Java
       - name: Set up Java
@@ -34,3 +35,4 @@ jobs:
         run: echo "Build completed"
       - name: run java script
         run: system.out.println("Java setup completed");
+        shell: java
