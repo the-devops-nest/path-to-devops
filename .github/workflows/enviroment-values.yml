@@ -24,11 +24,11 @@ jobs:
       - name: Display Environment Variables
         run: |
           echo "Owner: ${{ vars.OWNER }}"
-          echo "Environment: ${{ vars.ENV_NAME }}"
+          echo "Environment: ${{ vars.ENV }}"
 
       - name: Display Repository Variable
         run: |
-          echo "Mentor name is ${{ vars.MENTOR }}"
+          echo "Mentor name is ${{ vars.MENTIOR }}"
 
       - name: Display Workflow Runtime Variable
         run: |
