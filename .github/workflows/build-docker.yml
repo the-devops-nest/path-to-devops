@@ -9,9 +9,17 @@ on:
       Owner:
         description: "Repository owner"
         required: true
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 env:
-  ENV: ${{ github.event.inputs.DEMO_ENV }}
-  owner: ${{ github.event.inputs.Owner }}
+  ENV: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.DEMO_ENV || github.event_name == 'pull_request' && github.event.pull_request.base.ref || github.ref }}
+  owner: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.Owner || github.event_name == 'pull_request' && github.event.pull_request.head.repo.owner.login || github.repository_owner }}
+  
+  
 jobs:
   build:
     runs-on: ubuntu-latest
