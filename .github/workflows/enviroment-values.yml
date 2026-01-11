@@ -13,3 +13,13 @@ jobs:
       - name: Display Org level Variable
         run: |
           echo "The environment is ${{ vars.COMPANY_NAME }}"
+      - name: Display enviroment level Variable
+        run: |
+            echo "The repo environment is ${{ vars.owner}},${{ vars.env }}"
+      - name: Display Repository level Variable
+        run: |
+          echo "The  mentior name is ${{ vars.MENTIOR }}"
+        
+      - name: Display Workflow level Variable
+        run: |
+          echo "The workflow version is ${{ vars.WORKFLOW_VERSION }}"   
